@@ -1,0 +1,144 @@
+/* Analytics.css Nixtio Style */
+
+.analytics-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.analytics-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.analytics-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.date-filters {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.date-filters button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.date-filters button.active {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.date-scroller {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    /* Hide scrollbar visually but keep function */
+    scrollbar-width: none;
+}
+
+.date-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.date-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 64px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.date-pill:hover {
+    background-color: var(--bg-card-hover);
+}
+
+.date-pill.active {
+    background-color: #d1fae5;
+    /* Light green/mint for contrast */
+    color: #000;
+}
+
+.day-num {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.day-week {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Graph */
+.graph-container {
+    background-color: rgba(17, 17, 17, 0.4);
+    /* Slightly transparent */
+    border-radius: var(--radius-lg);
+    padding: 2px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    padding-right: 12px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    margin-bottom: 30px;
+    /* Space for x-axis */
+}
+
+.graph-plot {
+    flex: 1;
+    height: 230px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    color: var(--text-secondary);
+    font-size: 10px;
+}
+
+.stat-pill {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.stat-pill.accent {
+    background: var(--bg-accent);
+    color: black;
+}
+
+.stat-pill.outline {
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
